@@ -15,6 +15,9 @@ function TodoList(props) {
   );
 }
 
-const mapStateToProps = ({ todos }) => ({ todos });
+const mapStateToProps = ({ todoReducer }) => {
+  console.log(todoReducer);
+  return { todos: todoReducer.todos };
+};
 
 export default connect(mapStateToProps)(TodoList);

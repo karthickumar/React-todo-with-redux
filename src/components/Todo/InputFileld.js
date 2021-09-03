@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addTodoAction } from "../redux/action/todo.action";
+import { addTodoAction } from "../../redux/action/todo.action";
 
 class InputField extends Component {
   constructor(props) {
@@ -45,8 +45,8 @@ const mapDispatchToProps = (dispatch) => ({
   addTodo: (todo) => dispatch(addTodoAction(todo))
 });
 
-const mapStateToProps = ({ todoSelected }) => ({
-  todoSelected
+const mapStateToProps = ({ todoReducer }) => ({
+  todoSelected: todoReducer.todoSelected
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(InputField);

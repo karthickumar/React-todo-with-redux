@@ -1,13 +1,19 @@
 import "./styles.css";
-import InputField from "./components/InputFileld.js";
-import TodoList from "./components/TodoList";
+import Todo from "./components/Todo/Todo";
+import Users from "./components/Users/Users";
 
 export default function App() {
   return (
     <div className="App">
-      <h1>Todo App</h1>
-      <InputField />
-      <TodoList />
+      <h1>Redux & Thunk App</h1>
+      <div className="todo-user-container">
+        <div className="todo-container">
+          <Todo />
+        </div>
+        <div className="user-container">
+          <Users />
+        </div>
+      </div>
     </div>
   );
 }

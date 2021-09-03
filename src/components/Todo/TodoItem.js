@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import {
   deleteTodoAction,
   todoSelectionAction
-} from "../redux/action/todo.action";
+} from "../../redux/action/todo.action";
 
 function TodoItem(props) {
   console.log(props);
@@ -38,10 +38,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const mapStateToProps = (state) => {
-  return {
-    ...state
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(TodoItem);
+export default connect(null, mapDispatchToProps)(TodoItem);
